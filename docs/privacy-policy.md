@@ -14,7 +14,6 @@ Al usar la aplicación, aceptas las prácticas descritas en esta política.
 
 - **Correo electrónico y contraseña** (si creas una cuenta con email)
 - **Nombre** (si inicias sesión con Google)
-- **Foto de perfil** (si inicias sesión con Google)
 - **Resultados de simulacros**: número de preguntas respondidas, aciertos y calificaciones por materia
 
 ### 2.2 Datos recopilados automáticamente
@@ -54,7 +53,7 @@ Conservamos tus datos mientras tu cuenta esté activa. Si eliminas tu cuenta, to
 Puedes eliminar tu cuenta y todos tus datos asociados de las siguientes maneras:
 
 1. **Desde la aplicación**: ve a Perfil → Borrar Cuenta. Esto elimina tu cuenta, resultados, nombre y cualquier dato asociado de forma inmediata.
-2. **Solicitud por correo**: escribe a [coloca-tu-correo-aqui] con el asunto "Eliminar mis datos de Saber Más" e indicando el correo electrónico asociado a tu cuenta. Procesaremos la solicitud en un plazo máximo de 7 días hábiles.
+2. **Solicitud por correo**: escribe a chrispottermain98@gmail.com con el asunto "Eliminar mis datos de Saber Más" e indicando el correo electrónico asociado a tu cuenta. Procesaremos la solicitud en un plazo máximo de 7 días hábiles.
 
 ## 7. Seguridad
 
@@ -69,4 +68,4 @@ Notificaremos cualquier cambio a esta política a través de la aplicación. Te 
 
 ## 9. Contacto
 
-Si tienes preguntas sobre esta política de privacidad, puedes contactarnos en: [coloca-tu-correo-aqui]
+Si tienes preguntas sobre esta política de privacidad, puedes contactarnos en: chrispottermain98@gmail.com
