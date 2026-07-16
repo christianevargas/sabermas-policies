@@ -57,4 +57,4 @@ Estos términos se rigen por las leyes de la República de Colombia. Cualquier d
 
 ## 11. Contacto
 
-Para preguntas sobre estos términos, contáctanos en: [coloca-tu-correo-aqui]
+Para preguntas sobre estos términos, contáctanos en: chrispottermain98@gmail.com
