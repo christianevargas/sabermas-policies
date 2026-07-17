@@ -35,9 +35,9 @@ Al crear una cuenta aceptas:
 
 ### 4.2 Eliminación de cuenta
 
-Puedes eliminar tu cuenta en cualquier momento desde **Perfil → Borrar Cuenta**.
+Puedes eliminar tu cuenta en cualquier momento desde **Perfil → Borrar Cuenta**. La eliminación de la cuenta implica el borrado inmediato y permanente de los datos personales asociados de nuestros servidores, conforme a lo establecido en nuestra Política de Privacidad.
 
-La eliminación de la cuenta implica el borrado de los datos personales asociados, conforme a lo establecido en nuestra Política de Privacidad.
+Si utilizas la aplicación en modo invitado, no es necesario realizar este proceso, ya que no almacenamos ninguna información en nuestros servidores.
 
 ### 4.3 Suspensión o cancelación
 
@@ -93,7 +93,7 @@ No tenemos control sobre el contenido mostrado por los proveedores de publicidad
 
 ## 10. Privacidad
 
-El tratamiento de los datos personales se realiza conforme a nuestra **Política de Privacidad**, disponible tanto en la aplicación como en nuestro sitio web.
+El tratamiento de los datos personales se realiza conforme a nuestra [Política de Privacidad](https://christianevargas.github.io/sabermas-policies/privacy-policy) (o la URL de tu página), disponible tanto en la aplicación como en nuestro sitio web.
 
 Al utilizar la aplicación, reconoces haber leído dicha política.
 
@@ -119,7 +119,7 @@ Si tienes preguntas sobre estos Términos y Condiciones, puedes comunicarte con:
 
 **Christian Vargas**
 
-Bogotá D.C., Colombia
+Bucaramanga, Colombia
 
 **Correo electrónico:**  
 chrispottermain98@gmail.com
