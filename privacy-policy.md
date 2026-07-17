@@ -110,7 +110,7 @@ Puedes eliminar tu cuenta y los datos asociados de las siguientes maneras:
 
 1. **Desde la aplicación:** accede a **Perfil → Borrar Cuenta**. Esta acción eliminará tu cuenta y la información asociada.
 
-2. **A través de nuestro formulario web:** Puedes solicitar la eliminación de tu cuenta y datos sin necesidad de instalar la aplicación completando nuestro [Formulario de Solicitud de Eliminación de Datos](URL_DE_TU_GOOGLE_FORMS_AQUÍ).
+2. **A través de nuestro formulario web:** Puedes solicitar la eliminación de tu cuenta y datos sin necesidad de instalar la aplicación completando nuestro [Formulario de Solicitud de Eliminación de Datos](https://forms.gle/QnbjjD7LWVoMguTD8).
 
 3. **Mediante correo electrónico:** Envía un mensaje a **soporte.sabermas.app@gmail.com** con el asunto:
    **"Eliminar mis datos de Saber Más"** 
