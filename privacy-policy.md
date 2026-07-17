@@ -24,13 +24,13 @@ Si utilizas la aplicación como invitado, **no almacenamos información personal
 
 ### 2.3 Datos recopilados automáticamente
 
-Dependiendo del uso de la aplicación y de los servicios de terceros, pueden recopilarse los siguientes datos:
+Dependiendo del uso de la aplicación y de los servicios de terceros integrados en ella a través de sus respectivos Kits de Desarrollo de Software (SDKs), pueden recopilarse de forma automatizada los siguientes datos técnicos no sensibles:
 
-- **Identificadores de publicidad**, utilizados por Google AdMob para mostrar anuncios.
-- **Modelo del dispositivo.**
-- **Versión del sistema operativo.**
-- **Idioma del dispositivo.**
-- **Información técnica necesaria para garantizar el correcto funcionamiento de la aplicación.**
+- **Identificadores de publicidad (como el ID de publicidad de Google o AAID)**, utilizados por Google AdMob para mostrar y personalizar anuncios.
+- **Modelo del dispositivo, marca y fabricante.**
+- **Versión del sistema operativo y nivel de API.**
+- **Idioma del dispositivo y país de origen.**
+- **Información técnica sobre el rendimiento de la aplicación** (como informes de errores o crashes) para garantizar la estabilidad del servicio.
 
 ## 3. Edad mínima
 
@@ -60,13 +60,15 @@ No recopilamos intencionalmente datos personales de menores de 13 años.
 
 ### 5.1 Supabase
 
-Utilizamos **Supabase** como plataforma de backend para almacenar cuentas de usuario, resultados de simulacros y demás información necesaria para el funcionamiento del servicio.
+Utilizamos **Supabase** como plataforma de backend para almacenar cuentas de usuario, resultados de simulacros y demás información necesaria para el funcionamiento del servicio. 
 
 Supabase actúa como proveedor de infraestructura para el tratamiento de estos datos.
 
 Más información en:
 
-https://supabase.com/privacy
+[Política de Privacidad de Supabase](https://supabase.com/privacy)
+
+[Política de Privacidad de Google](https://policies.google.com/privacy)
 
 ### 5.2 Google AdMob
 
@@ -108,11 +110,11 @@ Puedes eliminar tu cuenta y los datos asociados de las siguientes maneras:
 
 1. **Desde la aplicación:** accede a **Perfil → Borrar Cuenta**. Esta acción eliminará tu cuenta y la información asociada.
 
-2. **Mediante correo electrónico:** envía un mensaje a **chrispottermain98@gmail.com** con el asunto:
+2. **A través de nuestro formulario web:** Puedes solicitar la eliminación de tu cuenta y datos sin necesidad de instalar la aplicación completando nuestro [Formulario de Solicitud de Eliminación de Datos](URL_DE_TU_GOOGLE_FORMS_AQUÍ).
 
-**"Eliminar mis datos de Saber Más"**
-
-e indicando el correo electrónico asociado a tu cuenta.
+3. **Mediante correo electrónico:** Envía un mensaje a **chrispottermain98@gmail.com** con el asunto:
+   **"Eliminar mis datos de Saber Más"** 
+   e indicando el correo electrónico asociado a tu cuenta.
 
 Procesaremos la solicitud en un plazo máximo de **7 días hábiles**.
 
