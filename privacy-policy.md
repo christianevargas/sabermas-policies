@@ -134,7 +134,7 @@ Aunque aplicamos medidas de seguridad razonables, ningún sistema es completamen
 
 **Christian Vargas**
 
-Bogotá D.C., Colombia
+Bucaramanga, Colombia
 
 Correo electrónico:
 
