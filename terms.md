@@ -122,4 +122,4 @@ Si tienes preguntas sobre estos Términos y Condiciones, puedes comunicarte con:
 Bucaramanga, Colombia
 
 **Correo electrónico:**  
-chrispottermain98@gmail.com
+soporte.sabermas.app@gmail.com
