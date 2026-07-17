@@ -96,7 +96,7 @@ De conformidad con la Ley 1581 de 2012 de Colombia y demás normas aplicables, t
 
 Puedes ejercer cualquiera de estos derechos escribiéndonos a:
 
-**chrispottermain98@gmail.com**
+**soporte.sabermas.app@gmail.com**
 
 ## 7. Retención de datos
 
@@ -112,7 +112,7 @@ Puedes eliminar tu cuenta y los datos asociados de las siguientes maneras:
 
 2. **A través de nuestro formulario web:** Puedes solicitar la eliminación de tu cuenta y datos sin necesidad de instalar la aplicación completando nuestro [Formulario de Solicitud de Eliminación de Datos](URL_DE_TU_GOOGLE_FORMS_AQUÍ).
 
-3. **Mediante correo electrónico:** Envía un mensaje a **chrispottermain98@gmail.com** con el asunto:
+3. **Mediante correo electrónico:** Envía un mensaje a **soporte.sabermas.app@gmail.com** con el asunto:
    **"Eliminar mis datos de Saber Más"** 
    e indicando el correo electrónico asociado a tu cuenta.
 
@@ -138,7 +138,7 @@ Bucaramanga, Colombia
 
 Correo electrónico:
 
-**chrispottermain98@gmail.com**
+**soporte.sabermas.app@gmail.com**
 
 ## 11. Cambios a esta política
 
@@ -152,4 +152,4 @@ Cuando los cambios sean relevantes, notificaremos a los usuarios mediante la pro
 
 Si tienes preguntas sobre esta Política de Privacidad o sobre el tratamiento de tus datos personales, puedes comunicarte con nosotros en:
 
-**chrispottermain98@gmail.com**
+**soporte.sabermas.app@gmail.com**
