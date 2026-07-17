@@ -1,24 +1,30 @@
 # Términos y Condiciones
 
-**Última actualización:** 16 de julio de 2026
+**Última actualización:** 17 de julio de 2026
 
 ## 1. Aceptación de los términos
 
-Al descargar, acceder o utilizar la aplicación **Saber Más** ("la aplicación"), aceptas cumplir estos Términos y Condiciones.
+Al descargar, acceder o utilizar la aplicación **Pre Saber Más** ("la aplicación"), aceptas cumplir estos Términos y Condiciones.
 
-Si no estás de acuerdo con alguno de ellos, debes abstenerte de utilizar la aplicación.
+Si eres menor de edad, tu aceptación de estos términos debe contar con el conocimiento y autorización de tus padres, madres o representantes legales, conforme se describe en la Sección 3.
+
+Si no estás de acuerdo con alguno de estos términos, debes abstenerte de utilizar la aplicación.
 
 ## 2. Descripción del servicio
 
-Saber Más es una plataforma educativa diseñada para apoyar la preparación de estudiantes para las **Pruebas Saber e ICFES** mediante simulacros, seguimiento del progreso y recursos de estudio.
+Pre Saber Más es una plataforma educativa diseñada para apoyar la preparación de estudiantes para las **Pruebas Saber e ICFES** mediante simulacros, seguimiento del progreso y recursos de estudio.
 
 La aplicación tiene fines exclusivamente educativos y **no está afiliada, respaldada, patrocinada ni representa al Instituto Colombiano para la Evaluación de la Educación (ICFES), al Ministerio de Educación Nacional ni a ninguna entidad gubernamental**.
 
-## 3. Edad mínima
+Actualmente la aplicación es de uso **gratuito**. Si en el futuro se incorporan compras o suscripciones dentro de la aplicación, estos Términos y Condiciones serán actualizados para incluir las condiciones específicas de pago, renovación y reembolso, y se notificará a los usuarios antes de su entrada en vigor.
+
+## 3. Menores de edad
 
 La aplicación está dirigida a personas de **13 años o más**.
 
-Si el usuario es menor de edad, recomendamos que utilice la aplicación con el conocimiento y supervisión de sus padres, madres o representantes legales cuando así lo exija la legislación aplicable.
+Si el usuario es menor de 18 años, el uso de la aplicación requiere el **conocimiento y autorización de sus padres, madres o representantes legales**, quienes se entienden facultados para actuar en su representación respecto del tratamiento de sus datos personales y la aceptación de estos términos, conforme al artículo 12 del Decreto 1377 de 2013.
+
+Al crear una cuenta, el usuario declara contar con dicha autorización cuando sea menor de edad, mediante la aceptación expresa presentada durante el proceso de registro.
 
 ## 4. Cuentas de usuario
 
@@ -35,7 +41,7 @@ Al crear una cuenta aceptas:
 
 ### 4.2 Eliminación de cuenta
 
-Puedes eliminar tu cuenta en cualquier momento desde **Perfil → Borrar Cuenta**. La eliminación de la cuenta implica el borrado inmediato y permanente de los datos personales asociados de nuestros servidores, conforme a lo establecido en nuestra Política de Privacidad.
+Puedes eliminar tu cuenta en cualquier momento desde **Perfil → Borrar Cuenta**. La eliminación de la cuenta implica el borrado inmediato y permanente de los datos personales asociados de nuestros servidores, conforme a lo establecido en nuestra [Política de Privacidad](./privacy-policy).
 
 Si utilizas la aplicación en modo invitado, no es necesario realizar este proceso, ya que no almacenamos ninguna información en nuestros servidores.
 
@@ -70,7 +76,7 @@ Aunque procuramos mantener el contenido actualizado y de calidad, este puede dif
 
 ## 8. Limitación de responsabilidad
 
-La aplicación se proporciona **"tal cual"**, sin garantías expresas o implícitas.
+La aplicación se proporciona **"tal cual"**, sin garantías expresas o implícitas, en la máxima medida permitida por la legislación colombiana aplicable, incluyendo la Ley 1480 de 2011 (Estatuto del Consumidor).
 
 No garantizamos que:
 
@@ -81,45 +87,47 @@ No garantizamos que:
 
 El uso de la aplicación no garantiza la obtención de un puntaje determinado.
 
-Asimismo, no seremos responsables por interrupciones ocasionadas por fallas de internet, mantenimiento, servicios de terceros o eventos fuera de nuestro control razonable.
+No seremos responsables por interrupciones ocasionadas por fallas de internet, mantenimiento, servicios de terceros o eventos fuera de nuestro control razonable. Ninguna disposición de esta sección pretende limitar o excluir derechos irrenunciables reconocidos a los consumidores por la legislación colombiana.
 
 ## 9. Publicidad
 
 La aplicación puede mostrar anuncios proporcionados por **Google AdMob**.
 
-Dependiendo de la configuración del dispositivo y de la legislación aplicable, dichos anuncios podrán ser personalizados o no personalizados.
+Dependiendo de la configuración del dispositivo, la edad declarada del usuario y la legislación aplicable, dichos anuncios podrán ser personalizados o no personalizados. Para usuarios menores de edad, la aplicación limita la publicidad a anuncios no personalizados y aptos para audiencias generales.
 
 No tenemos control sobre el contenido mostrado por los proveedores de publicidad.
 
 ## 10. Privacidad
 
-El tratamiento de los datos personales se realiza conforme a nuestra [Política de Privacidad](https://christianevargas.github.io/sabermas-policies/privacy-policy) (o la URL de tu página), disponible tanto en la aplicación como en nuestro sitio web.
+El tratamiento de los datos personales se realiza conforme a nuestra [Política de Privacidad](https://christianevargas.github.io/sabermas-policies/privacy-policy), disponible tanto en la aplicación como en nuestro sitio web.
 
-Al utilizar la aplicación, reconoces haber leído dicha política.
+Al utilizar la aplicación, reconoces haber leído dicha política y, en el caso de menores de edad, contar con la autorización de tus padres, madres o representantes legales para hacerlo.
 
-## 11. Cambios a estos términos
+## 11. Mecanismo de peticiones, quejas y reclamos (PQR)
+
+Si tienes una petición, queja o reclamo relacionado con el servicio, puedes escribirnos a **soporte.sabermas.app@gmail.com**. Procuraremos dar respuesta dentro de los plazos razonables previstos por la legislación colombiana aplicable.
+
+## 12. Cambios a estos términos
 
 Podremos modificar estos Términos y Condiciones cuando resulte necesario por motivos legales, técnicos o funcionales.
 
-La fecha de la última actualización aparecerá al inicio de este documento.
-
-Cuando los cambios sean relevantes, notificaremos a los usuarios mediante la aplicación.
+La fecha de la última actualización aparecerá al inicio de este documento. Cuando los cambios sean relevantes, notificaremos a los usuarios mediante la aplicación.
 
 El uso continuado de la aplicación después de la entrada en vigor de las modificaciones implica la aceptación de los nuevos términos.
 
-## 12. Legislación aplicable
+## 13. Legislación aplicable
 
 Estos Términos y Condiciones se rigen por las leyes de la República de Colombia.
 
-Cualquier controversia relacionada con la interpretación, ejecución o cumplimiento de estos términos será resuelta por las autoridades judiciales competentes de Colombia.
+Cualquier controversia relacionada con la interpretación, ejecución o cumplimiento de estos términos será resuelta por las autoridades judiciales competentes de Colombia, sin perjuicio de los derechos que la ley colombiana reconoce a los consumidores en materia de fuero y jurisdicción.
 
-## 13. Contacto
+## 14. Contacto
 
 Si tienes preguntas sobre estos Términos y Condiciones, puedes comunicarte con:
 
-**Christian Vargas**
+**Christian Vargas**, persona natural
 
 Bucaramanga, Colombia
 
-**Correo electrónico:**  
-soporte.sabermas.app@gmail.com
+Correo electrónico: soporte.sabermas.app@gmail.com
+
