@@ -1,0 +1,356 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:#0d0f13;
+    color:white;
+    overflow:hidden;
+}
+
+
+/* ===========================
+   BACKGROUND
+=========================== */
+
+.background{
+
+    position:fixed;
+    inset:0;
+    z-index:-2;
+
+    background:
+    radial-gradient(circle at 20% 30%,rgba(164,255,87,.08),transparent 30%),
+    radial-gradient(circle at 80% 25%,rgba(255,74,74,.08),transparent 25%),
+    linear-gradient(135deg,#101216,#16191f,#0d0f13);
+}
+
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:70px;
+}
+
+
+.hero-container{
+
+    width:100%;
+    max-width:1400px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    gap:50px;
+}
+
+
+/* ===========================
+   LEFT
+=========================== */
+
+.left{
+
+    flex:1;
+    max-width:620px;
+}
+
+
+.logo{
+
+    width:90px;
+    margin-bottom:18px;
+}
+
+
+.subtitle{
+
+    color:#c7f15f;
+    font-size:17px;
+    font-weight:600;
+    letter-spacing:2px;
+
+    margin-bottom:15px;
+}
+
+
+.left h1{
+
+    font-size:62px;
+    line-height:1.05;
+
+    font-weight:800;
+
+    margin-bottom:25px;
+}
+
+
+.left h1 span{
+
+    color:#c7f15f;
+}
+
+
+.description{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#d4d4d4;
+
+    margin-bottom:35px;
+}
+
+
+/* ===========================
+   FEATURES
+=========================== */
+
+.features{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    margin-bottom:40px;
+}
+
+
+.feature{
+
+    display:flex;
+
+    gap:15px;
+
+    align-items:center;
+}
+
+
+.icon{
+
+    width:55px;
+    height:55px;
+
+    border-radius:18px;
+
+    background:#1d2129;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    font-size:22px;
+}
+
+
+.feature h3{
+
+    font-size:16px;
+    font-weight:600;
+}
+
+
+.feature p{
+
+    color:#bfbfbf;
+    font-size:14px;
+}
+
+
+/* ===========================
+   GOOGLE PLAY
+=========================== */
+
+.store img{
+
+    width:220px;
+
+    transition:.3s;
+}
+
+
+.store img:hover{
+
+    transform:scale(1.05);
+}
+
+
+
+/* ===========================
+   RIGHT
+=========================== */
+
+.right{
+
+    flex:1;
+
+    position:relative;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+/* GLOW */
+
+.glow{
+
+    width:450px;
+    height:450px;
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,#c7f15f22,transparent 70%);
+
+    filter:blur(20px);
+}
+
+
+/* ===========================
+   PHONES
+=========================== */
+
+.phone{
+
+    width:250px;
+
+    position:absolute;
+
+    border-radius:35px;
+
+    box-shadow:
+    0 30px 70px rgba(0,0,0,.45);
+
+    transition:.35s;
+}
+
+
+.phone:hover{
+
+    transform:translateY(-10px) scale(1.03);
+}
+
+
+.phone1{
+
+    left:20px;
+
+    z-index:1;
+
+    transform:rotate(-13deg);
+}
+
+
+.phone2{
+
+    z-index:3;
+
+    width:270px;
+}
+
+
+.phone3{
+
+    right:20px;
+
+    z-index:2;
+
+    transform:rotate(13deg);
+}
+
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.footer{
+
+    position:absolute;
+
+    bottom:18px;
+
+    left:0;
+    right:0;
+
+    text-align:center;
+}
+
+
+.bottom-features{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:45px;
+
+    color:#bdbdbd;
+
+    margin-bottom:18px;
+
+    font-size:14px;
+}
+
+
+.footer-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+}
+
+
+.footer-links a{
+
+    color:#8d8d8d;
+
+    text-decoration:none;
+
+    transition:.3s;
+}
+
+
+.footer-links a:hover{
+
+    color:white;
+}
