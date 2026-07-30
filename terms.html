@@ -6,164 +6,297 @@
     <title>Términos y Condiciones - Pre Saber Más</title>
     <style>
         :root {
-            --primary-green: #5EB703;
-            --dark-green: #2E7D32;
-            --accent-blue: #195FB4;
-            --bg-light: #f4f7f1;
-            --text-main: #333333;
-            --text-light: #666666;
+            /* Brand Colors based on App Theme */
+            --green-primary: #5EB703;
+            --green-light: #A7E8A9;
+            --green-dark: #1E4620;
+            --blue-primary: #195FB4;
+            --blue-surface: #CCE8FB;
+            --teal-green: #0EAB77;
+            --green-pale: #DAF398;
+            --error-red: #FF2F2D;
+            --dark-gray: #1C1B1F;
+            --medium-gray: #49454F;
+            --light-gray: #DDDDDD;
+            --surface-white: #FFFFFF;
+            --background-light: #F4F9F4;
+            --card-shadow: rgba(0, 0, 0, 0.06);
         }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
-            color: var(--text-main);
-            background-color: var(--bg-light);
+            color: var(--dark-gray);
+            background-color: var(--background-light);
             margin: 0;
             padding: 0;
         }
 
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-
-        header {
+        .header {
+            background: linear-gradient(135deg, var(--green-primary), var(--teal-green));
+            color: white;
+            padding: 40px 20px;
             text-align: center;
-            border-bottom: 3px solid var(--accent-blue);
-            margin-bottom: 30px;
-            padding-bottom: 20px;
+            border-bottom: 4px solid var(--green-pale);
         }
 
-        h1 {
-            color: var(--accent-blue);
-            margin-bottom: 10px;
-            font-size: 2.2em;
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.2rem;
+            font-weight: 700;
         }
 
-        .update-date {
-            color: var(--text-light);
-            font-style: italic;
-            font-size: 0.9em;
+        .header .last-updated {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: -20px auto 40px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background-color: var(--surface-white);
+            border-radius: 16px;
+            padding: 32px 40px;
+            box-shadow: 0 4px 20px var(--card-shadow);
+            border: 1px solid var(--light-gray);
         }
 
         h2 {
-            color: var(--dark-green);
-            border-left: 5px solid var(--accent-blue);
-            padding-left: 15px;
-            margin-top: 40px;
-            font-size: 1.5em;
+            color: var(--blue-primary);
+            font-size: 1.4rem;
+            margin-top: 32px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--green-light);
+            display: flex;
+            align-items: center;
+        }
+
+        h2:first-of-type {
+            margin-top: 10px;
         }
 
         h3 {
-            color: var(--dark-green);
-            margin-top: 25px;
-            font-size: 1.2em;
+            color: var(--teal-green);
+            font-size: 1.15rem;
+            margin-top: 24px;
+            margin-bottom: 12px;
         }
 
         p, li {
-            margin-bottom: 15px;
-            text-align: justify;
+            color: var(--medium-gray);
+            font-size: 1rem;
         }
 
-        .highlight-box {
-            background-color: #fff9c4;
-            border: 1px solid #fbc02d;
-            padding: 20px;
-            border-radius: 10px;
+        ul, ol {
+            padding-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: var(--dark-gray);
+        }
+
+        a {
+            color: var(--blue-primary);
+            text-decoration: none;
             font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--teal-green);
+            text-decoration: underline;
+        }
+
+        /* Highlight box */
+        .highlight-box {
+            background-color: var(--blue-surface);
+            border-left: 4px solid var(--blue-primary);
+            padding: 16px 20px;
+            border-radius: 4px 8px 8px 4px;
             margin: 20px 0;
-            color: #856404;
         }
 
-        ul {
-            padding-left: 20px;
+        .highlight-box p {
+            margin: 0;
+            color: var(--dark-gray);
         }
 
-        .footer {
-            text-align: center;
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            color: var(--text-light);
-            font-size: 0.85em;
+        /* Contact Info Block */
+        .contact-info {
+            background-color: rgba(167, 232, 169, 0.2);
+            border: 1px solid var(--green-light);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .contact-info p {
+            margin: 4px 0;
         }
 
         @media (max-width: 600px) {
-            .container {
-                margin: 0;
-                padding: 20px;
-                border-radius: 0;
+            .card {
+                padding: 20px 20px;
             }
-            h1 { font-size: 1.8em; }
+
+            .header {
+                padding: 30px 15px;
+            }
+
+            .header h1 {
+                font-size: 1.75rem;
+            }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <header>
+    <header class="header">
         <h1>Términos y Condiciones</h1>
-        <p class="update-date">Última actualización: 17 de julio de 2026</p>
+        <div class="last-updated">Última actualización: 17 de julio de 2026</div>
     </header>
 
-    <section>
-        <h2>1. Aceptación de los términos</h2>
-        <p>Al descargar, acceder o utilizar la aplicación <strong>Pre Saber Más</strong> ("la aplicación"), aceptas cumplir estos Términos y Condiciones. Si eres menor de edad, tu aceptación debe contar con el conocimiento y autorización de tus padres o representantes legales.</p>
-    </section>
+    <main class="container">
+        <article class="card">
+            <section>
+                <h2>1. Aceptación de los términos</h2>
+                <p>Al descargar, acceder o utilizar la aplicación <strong>Pre Saber Más</strong> ("la aplicación"), aceptas cumplir estos Términos y Condiciones.</p>
+                <p>Si eres menor de edad, tu aceptación de estos términos debe contar con el conocimiento y autorización de tus padres, madres o representantes legales, conforme se describe en la Sección 3.</p>
+                <p>Si no estás de acuerdo con alguno de estos términos, debes abstenerte de utilizar la aplicación.</p>
+            </section>
 
-    <section>
-        <h2>2. Descripción del servicio</h2>
-        <p>Pre Saber Más es una plataforma educativa diseñada para apoyar la preparación de estudiantes para las Pruebas Saber e ICFES mediante simulacros y recursos de estudio.</p>
-        
-        <div class="highlight-box">
-            <strong>AVISO IMPORTANTE:</strong> La aplicación tiene fines exclusivamente educativos y NO está afiliada, respaldada ni representa al Instituto Colombiano para la Evaluación de la Educación (ICFES), al Ministerio de Educación Nacional ni a ninguna entidad gubernamental.
-        </div>
-        
-        <p>Actualmente la aplicación es de uso gratuito.</p>
-    </section>
+            <section>
+                <h2>2. Descripción del servicio</h2>
+                <p>Pre Saber Más es una plataforma educativa diseñada para apoyar la preparación de estudiantes para las <strong>Pruebas Saber e ICFES</strong> mediante simulacros, seguimiento del progreso y recursos de estudio.</p>
+                
+                <div class="highlight-box">
+                    <p>La aplicación tiene fines exclusivamente educativos y <strong>no está afiliada, respaldada, patrocinada ni representa al Instituto Colombiano para la Evaluación de la Educación (ICFES), al Ministerio de Educación Nacional ni a ninguna entidad gubernamental</strong>.</p>
+                </div>
 
-    <section>
-        <h2>3. Cuentas de usuario</h2>
-        <h3>3.1 Registro</h3>
-        <p>Al crear una cuenta aceptas proporcionar información veraz, mantener la confidencialidad de tu contraseña y ser responsable de toda la actividad realizada desde tu perfil.</p>
+                <p>Actualmente la aplicación es de uso <strong>gratuito</strong>. Si en el futuro se incorporan compras o suscripciones dentro de la aplicación, estos Términos y Condiciones serán actualizados para incluir las condiciones específicas de pago, renovación y reembolso, y se notificará a los usuarios antes de su entrada en vigor.</p>
+            </section>
 
-        <h3>3.2 Eliminación de cuenta</h3>
-        <p>Puedes eliminar tu cuenta en cualquier momento desde <strong>Perfil → Borrar Cuenta</strong>. Esta acción es definitiva y borra toda tu información de nuestros servidores conforme a nuestra política de privacidad.</p>
-    </section>
+            <section>
+                <h2>3. Menores de edad</h2>
+                <p>La aplicación está dirigida a personas de <strong>13 años o más</strong>.</p>
+                <p>Si el usuario es menor de 18 años, el uso de la aplicación requiere el <strong>conocimiento y autorización de sus padres, madres o representantes legales</strong>, quienes se entienden facultados para actuar en su representación respecto del tratamiento de sus datos personales y la aceptación de estos términos, conforme al artículo 12 del Decreto 1377 de 2013.</p>
+                <p>Al crear una cuenta, el usuario declara contar con dicha autorización cuando sea menor de edad, mediante la aceptación expresa presentada durante el proceso de registro.</p>
+            </section>
 
-    <section>
-        <h2>4. Uso permitido</h2>
-        <p>Aceptas utilizar la aplicación únicamente con fines educativos. Queda prohibido:</p>
-        <ul>
-            <li>Utilizar la aplicación para actividades ilegales.</li>
-            <li>Realizar ingeniería inversa o modificar el código de la App.</li>
-            <li>Intentar acceder masivamente al contenido mediante bots.</li>
-            <li>Reproducir el contenido con fines comerciales sin autorización.</li>
-        </ul>
-    </section>
+            <section>
+                <h2>4. Cuentas de usuario</h2>
+                
+                <h3>4.1 Registro</h3>
+                <p>Puedes utilizar la aplicación como invitado o crear una cuenta.</p>
+                <p>Al crear una cuenta aceptas:</p>
+                <ul>
+                    <li>Proporcionar información veraz y actualizada.</li>
+                    <li>No crear cuentas falsas ni suplantar la identidad de otras personas.</li>
+                    <li>Mantener la confidencialidad de tu contraseña.</li>
+                    <li>Ser responsable de toda la actividad realizada desde tu cuenta.</li>
+                </ul>
 
-    <section>
-        <h2>5. Limitación de responsabilidad</h2>
-        <p>La aplicación se proporciona <strong>"tal cual"</strong>. No garantizamos que la App esté libre de errores ni que los simulacros predigan con exactitud el desempeño real en las pruebas oficiales.</p>
-        <p>El uso de la aplicación no garantiza la obtención de un puntaje determinado.</p>
-    </section>
+                <h3>4.2 Eliminación de cuenta</h3>
+                <p>Puedes eliminar tu cuenta en cualquier momento desde <strong>Perfil → Borrar Cuenta</strong>. La eliminación de la cuenta implica el borrado inmediato y permanente de los datos personales asociados de nuestros servidores, conforme a lo establecido en nuestra <a href="https://christianevargas.github.io/sabermas-policies/privacy-policy" target="_blank" rel="noopener">Política de Privacidad</a>.</p>
+                <p>Si utilizas la aplicación en modo invitado, no es necesario realizar este proceso, ya que no almacenamos ninguna información en nuestros servidores.</p>
 
-    <section>
-        <h2>6. Legislación aplicable</h2>
-        <p>Estos Términos y Condiciones se rigen por las leyes de la República de Colombia. Cualquier controversia será resuelta por las autoridades judiciales competentes de Colombia.</p>
-    </section>
+                <h3>4.3 Suspensión o cancelación</h3>
+                <p>Nos reservamos el derecho de suspender o cancelar cuentas que incumplan estos términos, utilicen la aplicación de forma fraudulenta, afecten su funcionamiento o vulneren los derechos de otros usuarios.</p>
+            </section>
 
-    <div class="footer">
-        <p>Responsable: Christian Vargas - Bucaramanga, Colombia</p>
-        <p>Contacto: soporte.sabermas.app@gmail.com</p>
-        <p>© 2026 Pre Saber Más - Todos los derechos reservados.</p>
-    </div>
-</div>
+            <section>
+                <h2>5. Uso permitido</h2>
+                <p>Aceptas utilizar la aplicación únicamente con fines educativos y de preparación académica.</p>
+                <p>Queda prohibido:</p>
+                <ul>
+                    <li>Utilizar la aplicación para actividades ilegales o no autorizadas.</li>
+                    <li>Intentar acceder sin autorización a información de otros usuarios.</li>
+                    <li>Compartir credenciales de acceso con terceros.</li>
+                    <li>Realizar ingeniería inversa, descompilar o modificar la aplicación.</li>
+                    <li>Automatizar consultas mediante bots o herramientas similares.</li>
+                    <li>Reproducir, distribuir o utilizar el contenido de la aplicación sin autorización.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>6. Propiedad intelectual</h2>
+                <p>Todo el contenido de la aplicación, incluyendo textos, diseños, logotipos, bases de datos, interfaz gráfica, preguntas desarrolladas por Saber Más y demás elementos protegidos por la legislación aplicable, pertenece a sus respectivos titulares.</p>
+                <p>Salvo autorización expresa, no está permitido copiar, reproducir, distribuir, modificar o utilizar dicho contenido con fines comerciales.</p>
+            </section>
+
+            <section>
+                <h2>7. Contenido de la aplicación</h2>
+                <p>Los simulacros, preguntas y demás recursos educativos se ofrecen con fines exclusivamente académicos.</p>
+                <p>Aunque procuramos mantener el contenido actualizado y de calidad, este puede diferir del contenido de las pruebas oficiales y no representa material oficial del ICFES.</p>
+            </section>
+
+            <section>
+                <h2>8. Limitación de responsabilidad</h2>
+                <p>La aplicación se proporciona <strong>"tal cual"</strong>, sin garantías expresas o implícitas, en la máxima medida permitida por la legislación colombiana aplicable, incluyendo la Ley 1480 de 2011 (Estatuto del Consumidor).</p>
+                <p>No garantizamos que:</p>
+                <ul>
+                    <li>La aplicación esté libre de errores o interrupciones.</li>
+                    <li>El servicio esté disponible de forma ininterrumpida.</li>
+                    <li>Los simulacros predigan el desempeño del usuario en las Pruebas Saber o ICFES.</li>
+                    <li>El contenido cubra la totalidad de los temas evaluados en los exámenes oficiales.</li>
+                </ul>
+                <p>El uso de la aplicación no garantiza la obtención de un puntaje determinado.</p>
+                <p>No seremos responsables por interrupciones ocasionadas por fallas de internet, mantenimiento, servicios de terceros o eventos fuera de nuestro control razonable. Ninguna disposición de esta sección pretende limitar o excluir derechos irrenunciables reconocidos a los consumidores por la legislación colombiana.</p>
+            </section>
+
+            <section>
+                <h2>9. Publicidad</h2>
+                <p>La aplicación puede mostrar anuncios proporcionados por <strong>Google AdMob</strong>.</p>
+                <p>Dependiendo de la configuración del dispositivo, la edad declarada del usuario y la legislación aplicable, dichos anuncios podrán ser personalizados o no personalizados. Para usuarios menores de edad, la aplicación limita la publicidad a anuncios no personalizados y aptos para audiencias generales.</p>
+                <p>No tenemos control sobre el contenido mostrado por los proveedores de publicidad.</p>
+            </section>
+
+            <section>
+                <h2>10. Privacidad</h2>
+                <p>El tratamiento de los datos personales se realiza conforme a nuestra <a href="https://christianevargas.github.io/sabermas-policies/privacy-policy" target="_blank" rel="noopener">Política de Privacidad</a>, disponible tanto en la aplicación como en nuestro sitio web.</p>
+                <p>Al utilizar la aplicación, reconoces haber leído dicha política y, en el caso de menores de edad, contar con la autorización de tus padres, madres o representantes legales para hacerlo.</p>
+            </section>
+
+            <section>
+                <h2>11. Mecanismo de peticiones, quejas y reclamos (PQR)</h2>
+                <p>Si tienes una petición, queja o reclamo relacionado con el servicio, puedes escribirnos a <a href="mailto:soporte.sabermas.app@gmail.com">soporte.sabermas.app@gmail.com</a>. Procuraremos dar respuesta dentro de los plazos razonables previstos por la legislación colombiana aplicable.</p>
+            </section>
+
+            <section>
+                <h2>12. Cambios a estos términos</h2>
+                <p>Podremos modificar estos Términos y Condiciones cuando resulte necesario por motivos legales, técnicos o funcionales.</p>
+                <p>La fecha de la última actualización aparecerá al inicio de este documento. Cuando los cambios sean relevantes, notificaremos a los usuarios mediante la aplicación.</p>
+                <p>El uso continuado de la aplicación después de la entrada en vigor de las modificaciones implica la aceptación de los nuevos términos.</p>
+            </section>
+
+            <section>
+                <h2>13. Legislación aplicable</h2>
+                <p>Estos Términos y Condiciones se rigen por las leyes de la República de Colombia.</p>
+                <p>Cualquier controversia relacionada con la interpretación, ejecución o cumplimiento de estos términos será resuelta por las autoridades judiciales competentes de Colombia, sin perjuicio de los derechos que la ley colombiana reconoce a los consumidores en materia de fuero y jurisdicción.</p>
+            </section>
+
+            <section>
+                <h2>14. Contacto</h2>
+                <div class="contact-info">
+                    <p>Si tienes preguntas sobre estos Términos y Condiciones, puedes comunicarte con:</p>
+                    <p><strong>Christian Vargas</strong>, persona natural</p>
+                    <p>Bucaramanga, Colombia</p>
+                    <p>Correo electrónico: <a href="mailto:soporte.sabermas.app@gmail.com">soporte.sabermas.app@gmail.com</a></p>
+                </div>
+            </section>
+        </article>
+    </main>
 
 </body>
 </html>
