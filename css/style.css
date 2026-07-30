@@ -271,29 +271,20 @@ body{
 
 .phone1{
 
-    left:20px;
-
     z-index:1;
 
-    transform:rotate(-13deg);
 }
-
 
 .phone2{
 
     z-index:3;
 
-    width:270px;
 }
-
 
 .phone3{
 
-    right:20px;
-
     z-index:2;
 
-    transform:rotate(13deg);
 }
 
 
