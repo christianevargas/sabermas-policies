@@ -520,7 +520,8 @@ body {
     }
 
     .right {
-        min-height: 520px;
+        height: 620px;
+        min-height: 0;
     }
 }
 
@@ -552,11 +553,12 @@ body {
     }
 
     .right {
-        min-height: 480px;
+        height: 520px;
+        min-height: 0;
     }
 
     .phone-2 {
-        width: 240px;
+        width: 220px;
     }
 
     .footer-features {
