@@ -1,54 +1,47 @@
-/* =====================================
-   PRE SABER MÁS LANDING
-===================================== */
-
 document.addEventListener("DOMContentLoaded", () => {
-
-    // Fade al cargar
-    document.body.classList.add("loaded");
 
     const phones = document.querySelectorAll(".phone");
 
-    // Posiciones originales
-    const basePositions = [
-        { x: -120, y: 20, rotate: -13 },
-        { x: 0, y: 0, rotate: 0 },
-        { x: 120, y: 20, rotate: 13 }
-    ];
-
-    // Animación de flotación
-    function animatePhones() {
+    // Animación flotante
+    function floatPhones() {
 
         const t = Date.now() * 0.001;
 
-        phones.forEach((phone, i) => {
+        phones.forEach((phone, index) => {
 
-            const floatY = Math.sin(t + i) * 10;
-            const rotate = basePositions[i].rotate + Math.sin(t + i) * 2;
+            const offset = Math.sin(t + index) * 10;
+
+            let rotation = 0;
+
+            if (phone.classList.contains("left-phone"))
+                rotation = -13;
+
+            if (phone.classList.contains("right-phone"))
+                rotation = 13;
 
             phone.style.transform =
-                `translate(${basePositions[i].x}px, ${basePositions[i].y + floatY}px)
-                 rotate(${rotate}deg)`;
+                `translateY(${offset}px) rotate(${rotation}deg)`;
 
         });
 
-        requestAnimationFrame(animatePhones);
+        requestAnimationFrame(floatPhones);
+
     }
 
-    animatePhones();
+    floatPhones();
 
-    // Parallax con el mouse
-    document.addEventListener("mousemove", (e) => {
+    // Parallax suave
+    document.addEventListener("mousemove", e => {
 
-        const x = (e.clientX / window.innerWidth - 0.5) * 20;
-        const y = (e.clientY / window.innerHeight - 0.5) * 20;
+        const x = (e.clientX / window.innerWidth - 0.5) * 12;
+        const y = (e.clientY / window.innerHeight - 0.5) * 12;
 
         phones.forEach((phone, i) => {
 
-            const depth = (i + 1) * 4;
+            const factor = (i + 1) * 0.6;
 
-            phone.style.marginLeft = `${x / depth}px`;
-            phone.style.marginTop = `${y / depth}px`;
+            phone.style.marginLeft = `${x * factor}px`;
+            phone.style.marginTop = `${y * factor}px`;
 
         });
 
