@@ -1,0 +1,569 @@
+/* ==========================================================
+   PRE SABER MÁS · LANDING
+   Tabla de contenido:
+   1.  Variables / Colores
+   2.  Reset base
+   3.  Fondo decorativo (glows)
+   4.  Hero / Layout principal
+   5.  Lado izquierdo · Marca
+   6.  Titulo y descripcion
+   7.  Feature cards (glassmorphism)
+   8.  Google Play
+   9.  Lado derecho · Telefonos
+   10. Footer
+   11. Animaciones
+   12. Responsive
+=========================================================== */
+
+
+/* ==========================================================
+   1. VARIABLES
+=========================================================== */
+
+:root {
+    --bg:            #090B10;
+    --green:         #63D64C;
+    --red:           #FF4B4B;
+    --white:         #FFFFFF;
+    --gray:          #BFBFBF;
+
+    --text:          #F4F5F7;
+    --muted:         #9BA0A8;
+
+    --glass-bg:      rgba(255, 255, 255, 0.04);
+    --glass-border:  rgba(255, 255, 255, 0.09);
+    --glass-icon:    rgba(99, 214, 76, 0.12);
+
+    --radius-lg:     22px;
+    --radius-md:     16px;
+    --radius-sm:     12px;
+
+    --shadow-phone:  0 40px 80px rgba(0, 0, 0, 0.55);
+    --shadow-card:   0 18px 40px rgba(0, 0, 0, 0.35);
+
+    --ease:          cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* ==========================================================
+   2. RESET BASE
+=========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: var(--white);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* ==========================================================
+   3. FONDO DECORATIVO
+=========================================================== */
+
+.background {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 18% 28%, rgba(99, 214, 76, 0.07), transparent 32%),
+        radial-gradient(circle at 82% 22%, rgba(255, 75, 75, 0.05), transparent 26%),
+        linear-gradient(160deg, #0B0E15 0%, #090B10 55%, #0A0C12 100%);
+}
+
+.glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    pointer-events: none;
+}
+
+.glow-green {
+    width: 520px;
+    height: 520px;
+    top: -180px;
+    left: -160px;
+    background: radial-gradient(circle, rgba(99, 214, 76, 0.28), transparent 65%);
+}
+
+.glow-red {
+    width: 320px;
+    height: 320px;
+    top: -80px;
+    right: -80px;
+    background: radial-gradient(circle, rgba(255, 75, 75, 0.22), transparent 65%);
+}
+
+
+/* ==========================================================
+   4. HERO / LAYOUT PRINCIPAL
+=========================================================== */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 700px;
+    max-height: 1080px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 34px 56px 0;
+}
+
+.container {
+    flex: 1;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 45% 55%;
+    align-items: center;
+    gap: 40px;
+}
+
+
+/* ==========================================================
+   5. LADO IZQUIERDO · MARCA
+=========================================================== */
+
+.left {
+    max-width: 620px;
+}
+
+/* Marca */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 34px;
+}
+
+.logo {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 24px rgba(99, 214, 76, 0.25));
+}
+
+.brand-name {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.brand-name .green { color: var(--green); }
+.brand-name .red   { color: var(--red); }
+
+.brand-tagline {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--muted);
+    margin-top: 4px;
+}
+
+
+/* ==========================================================
+   6. TITULO Y DESCRIPCION
+=========================================================== */
+
+.title {
+    font-size: clamp(46px, 4.6vw, 64px);
+    font-weight: 800;
+    line-height: 1.06;
+    letter-spacing: -0.03em;
+    margin-bottom: 22px;
+}
+
+.title-accent {
+    display: block;
+    color: var(--green);
+}
+
+.description {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.85;
+    color: var(--muted);
+    max-width: 460px;
+    margin-bottom: 30px;
+}
+
+
+/* ==========================================================
+   7. FEATURES · GLASSMORPHISM
+=========================================================== */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-bottom: 32px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 16px 18px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    transition: transform 0.5s var(--ease),
+                border-color 0.5s var(--ease),
+                background 0.5s var(--ease),
+                box-shadow 0.5s var(--ease);
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    border-color: rgba(99, 214, 76, 0.35);
+    background: rgba(99, 214, 76, 0.06);
+    box-shadow: var(--shadow-card);
+}
+
+.feature-icon {
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--green);
+    background: var(--glass-icon);
+    border: 1px solid rgba(99, 214, 76, 0.18);
+}
+
+.feature-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.feature-text h3 {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.feature-text p {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--muted);
+    margin-top: 2px;
+}
+
+
+/* ==========================================================
+   8. GOOGLE PLAY
+=========================================================== */
+
+.store {
+    display: inline-block;
+    width: 218px;
+    transition: transform 0.5s var(--ease),
+                filter 0.5s var(--ease);
+}
+
+.store img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.store:hover {
+    transform: scale(1.06);
+    filter: drop-shadow(0 14px 34px rgba(99, 214, 76, 0.25));
+}
+
+
+/* ==========================================================
+   9. LADO DERECHO · TELEFONOS
+=========================================================== */
+
+.right {
+    position: relative;
+    height: 100%;
+    min-height: 620px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Glow detras de los telefonos */
+.right .glow {
+    position: absolute;
+    width: 460px;
+    height: 460px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(60px);
+    background: radial-gradient(circle, rgba(99, 214, 76, 0.18), transparent 65%);
+}
+
+.phones {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.phone {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 36px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: #131722;
+    box-shadow: var(--shadow-phone);
+    will-change: transform;
+}
+
+.phone img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Telefono central · mayor tamaño */
+.phone-2 {
+    width: 270px;
+    z-index: 3;
+    border-color: rgba(255, 255, 255, 0.16);
+}
+
+/* Telefonos laterales */
+.phone-1,
+.phone-3 {
+    width: 216px;
+    z-index: 2;
+}
+
+.phone-1 { border-radius: 30px; }
+.phone-3 { border-radius: 30px; }
+
+
+/* ==========================================================
+   10. FOOTER
+=========================================================== */
+
+.footer {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 22px;
+
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    padding: 18px 34px;
+    text-align: center;
+}
+
+.footer-features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 44px;
+    margin-bottom: 14px;
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--gray);
+}
+
+.footer-item svg {
+    width: 16px;
+    height: 16px;
+    color: var(--green);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    font-size: 13.5px;
+    font-weight: 400;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--white);
+}
+
+.footer-links .dot {
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.copyright {
+    font-size: 12.5px;
+    font-weight: 300;
+    color: var(--muted);
+}
+
+
+/* ==========================================================
+   11. ANIMACIONES
+=========================================================== */
+
+/* Fade in del hero al cargar */
+.hero {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.9s var(--ease),
+                transform 0.9s var(--ease);
+}
+
+.hero.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Flotacion suave de los telefonos */
+@keyframes float-phone {
+    0%, 100% { translate: 0 0; }
+    50%      { translate: 0 -12px; }
+}
+
+/* Respeto por animaciones reducidas */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+/* ==========================================================
+   12. RESPONSIVE
+=========================================================== */
+
+/* Tablets */
+@media (max-width: 1100px) {
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        overflow: auto;
+        padding: 44px 40px 30px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding-top: 20px;
+    }
+
+    .left {
+        max-width: 640px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .brand {
+        justify-content: center;
+    }
+
+    .description {
+        margin: 0 auto 30px;
+    }
+
+    .features {
+        max-width: 560px;
+        margin: 0 auto 32px;
+    }
+
+    .store {
+        margin-bottom: 20px;
+    }
+
+    .right {
+        min-height: 520px;
+    }
+}
+
+/* Moviles */
+@media (max-width: 720px) {
+    .hero {
+        padding: 34px 22px 24px;
+    }
+
+    .brand-name { font-size: 24px; }
+    .logo { width: 58px; height: 58px; }
+    .title { font-size: 40px; }
+    .description { font-size: 15.5px; }
+
+    .features {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .feature {
+        text-align: left;
+        justify-content: flex-start;
+    }
+
+    /* Solo el telefono central en pantallas pequenas */
+    .phone-1,
+    .phone-3 {
+        display: none;
+    }
+
+    .right {
+        min-height: 480px;
+    }
+
+    .phone-2 {
+        width: 240px;
+    }
+
+    .footer-features {
+        gap: 10px 26px;
+    }
+
+    .footer {
+        padding: 16px 20px;
+    }
+}

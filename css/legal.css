@@ -1,0 +1,527 @@
+/* ==========================================================
+   PRE SABER MÁS · PAGINAS LEGALES
+   Estilos compartidos de terms.html y privacy-policy.html
+   Tabla de contenido:
+   1.  Variables
+   2.  Reset / Base
+   3.  Fondo decorativo
+   4.  Barra de navegacion superior
+   5.  Encabezado de pagina
+   6.  Tarjeta de contenido
+   7.  Tipografia (h2, h3, texto, enlaces)
+   8.  Cajas destacadas
+   9.  Tablas
+   10. Informacion de contacto
+   11. Footer
+   12. Animaciones
+   13. Responsive
+=========================================================== */
+
+/* ==========================================================
+   0. GOOGLE FONT
+=========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/* ==========================================================
+   1. VARIABLES
+=========================================================== */
+
+:root {
+    --bg:            #090B10;
+    --green:         #63D64C;
+    --red:           #FF4B4B;
+    --white:         #FFFFFF;
+    --gray:          #BFBFBF;
+
+    --text:          #F4F5F7;
+    --muted:         #9BA0A8;
+
+    --glass-bg:      rgba(255, 255, 255, 0.04);
+    --glass-border:  rgba(255, 255, 255, 0.09);
+    --glass-hover:   rgba(99, 214, 76, 0.08);
+
+    --radius-lg:     24px;
+    --radius-md:     16px;
+    --radius-sm:     12px;
+
+    --ease:          cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* ==========================================================
+   2. RESET / BASE
+=========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* ==========================================================
+   3. FONDO DECORATIVO
+=========================================================== */
+
+.background {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 18% 12%, rgba(99, 214, 76, 0.07), transparent 30%),
+        radial-gradient(circle at 85% 18%, rgba(255, 75, 75, 0.05), transparent 25%),
+        linear-gradient(160deg, #0B0E15 0%, #090B10 55%, #0A0C12 100%);
+}
+
+.glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    pointer-events: none;
+}
+
+.glow-green {
+    width: 520px;
+    height: 520px;
+    top: -200px;
+    left: -160px;
+    background: radial-gradient(circle, rgba(99, 214, 76, 0.22), transparent 65%);
+}
+
+.glow-red {
+    width: 320px;
+    height: 320px;
+    top: -120px;
+    right: -100px;
+    background: radial-gradient(circle, rgba(255, 75, 75, 0.16), transparent 65%);
+}
+
+
+/* ==========================================================
+   4. BARRA DE NAVEGACION SUPERIOR
+=========================================================== */
+
+.topbar {
+    position: sticky;
+    top: 14px;
+    z-index: 20;
+
+    max-width: 1120px;
+    margin: 14px auto 0;
+    padding: 12px 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    border-radius: var(--radius-md);
+    border: 1px solid var(--glass-border);
+    background: rgba(9, 11, 16, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.brand .logo {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+}
+
+.brand .name {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text);
+}
+
+.brand .name .green { color: var(--green); }
+.brand .name .red   { color: var(--red); }
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav a {
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.3s ease,
+                background 0.3s ease;
+}
+
+.nav a:hover {
+    color: var(--white);
+    background: var(--glass-bg);
+}
+
+.nav a.active {
+    color: var(--green);
+    background: var(--glass-hover);
+}
+
+
+/* ==========================================================
+   5. ENCABEZADO DE PAGINA
+=========================================================== */
+
+.page-header {
+    text-align: center;
+    padding: 64px 20px 40px;
+}
+
+.page-header h1 {
+    font-size: clamp(34px, 5vw, 52px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 14px;
+}
+
+.page-header .title-accent {
+    color: var(--green);
+}
+
+.last-updated {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--muted);
+
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+}
+
+.last-updated::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--green);
+}
+
+
+/* ==========================================================
+   6. TARJETA DE CONTENIDO
+=========================================================== */
+
+.card {
+    max-width: 880px;
+    margin: 0 auto 56px;
+    padding: 44px 52px;
+
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ==========================================================
+   7. TIPOGRAFIA
+=========================================================== */
+
+.card h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--text);
+
+    margin: 36px 0 16px;
+    padding-left: 16px;
+    border-left: 4px solid var(--green);
+}
+
+.card h2:first-of-type {
+    margin-top: 6px;
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--green);
+    margin: 24px 0 12px;
+}
+
+.card p {
+    font-size: 0.98rem;
+    font-weight: 300;
+    color: var(--gray);
+    margin-bottom: 14px;
+}
+
+.card ul,
+.card ol {
+    padding-left: 24px;
+    margin-bottom: 18px;
+}
+
+.card li {
+    font-size: 0.98rem;
+    font-weight: 300;
+    color: var(--gray);
+    margin-bottom: 8px;
+}
+
+.card li::marker {
+    color: var(--green);
+}
+
+.card strong {
+    color: var(--white);
+    font-weight: 600;
+}
+
+.card a {
+    color: var(--green);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: color 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.card a:hover {
+    color: var(--white);
+    border-bottom-color: var(--green);
+}
+
+
+/* ==========================================================
+   8. CAJAS DESTACADAS
+=========================================================== */
+
+.highlight-box {
+    margin: 20px 0;
+    padding: 18px 22px;
+
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(99, 214, 76, 0.25);
+    border-left: 4px solid var(--green);
+    background: var(--glass-hover);
+}
+
+.highlight-box p {
+    margin: 0;
+    color: var(--text);
+}
+
+
+/* ==========================================================
+   9. TABLAS
+=========================================================== */
+
+.table-container {
+    overflow-x: auto;
+    margin: 20px 0;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--glass-border);
+    background: rgba(0, 0, 0, 0.18);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+th {
+    background: rgba(99, 214, 76, 0.10);
+    color: var(--green);
+    font-weight: 600;
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--glass-border);
+    white-space: nowrap;
+}
+
+td {
+    padding: 14px 18px;
+    color: var(--gray);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    vertical-align: top;
+}
+
+td strong {
+    color: var(--white);
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+
+/* ==========================================================
+   10. INFORMACION DE CONTACTO
+=========================================================== */
+
+.contact-info {
+    margin-top: 20px;
+    padding: 20px 22px;
+
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(99, 214, 76, 0.25);
+    background: var(--glass-hover);
+}
+
+.contact-info p {
+    margin: 4px 0;
+}
+
+.contact-info p:first-child {
+    margin-top: 0;
+}
+
+.contact-info p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ==========================================================
+   11. FOOTER
+=========================================================== */
+
+.legal-footer {
+    text-align: center;
+    padding: 8px 20px 44px;
+}
+
+.legal-footer .footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    margin-bottom: 10px;
+}
+
+.legal-footer .footer-links a {
+    font-size: 13.5px;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.legal-footer .footer-links a:hover {
+    color: var(--green);
+}
+
+.legal-footer .dot {
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.legal-footer .copyright {
+    font-size: 12.5px;
+    font-weight: 300;
+    color: var(--muted);
+}
+
+
+/* ==========================================================
+   12. ANIMACIONES
+=========================================================== */
+
+@keyframes rise {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-header {
+    animation: rise 0.8s var(--ease) both;
+}
+
+.card {
+    animation: rise 0.8s var(--ease) 0.15s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+/* ==========================================================
+   13. RESPONSIVE
+=========================================================== */
+
+@media (max-width: 760px) {
+    .topbar {
+        top: 8px;
+        margin: 8px 12px 0;
+        padding: 10px 14px;
+        flex-wrap: wrap;
+    }
+
+    .brand .name {
+        font-size: 15px;
+    }
+
+    .nav a {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+
+    .page-header {
+        padding: 44px 16px 28px;
+    }
+
+    .card {
+        margin: 0 12px 40px;
+        padding: 26px 22px;
+        border-radius: var(--radius-md);
+    }
+
+    .card h2 {
+        font-size: 1.15rem;
+    }
+}
