@@ -546,19 +546,38 @@ body {
         justify-content: flex-start;
     }
 
-    /* Solo el telefono central en pantallas pequenas */
+    /* Solo el telefono central, en flujo normal (sin solapamientos) */
     .phone-1,
     .phone-3 {
         display: none;
     }
 
     .right {
-        height: 520px;
+        height: auto;
         min-height: 0;
+        padding: 8px 0 4px;
+    }
+
+    .phones {
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .phone {
+        position: relative;
+        top: auto;
+        left: auto;
     }
 
     .phone-2 {
-        width: 220px;
+        width: 120px;
+    }
+
+    .right .glow {
+        width: 260px;
+        height: 260px;
     }
 
     .footer-features {

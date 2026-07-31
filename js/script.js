@@ -16,7 +16,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ---------------------------------------------
-    // 2. Configuracion de los telefonos
+    // 2. Solo animar los telefonos en pantallas grandes.
+    //    En movil el CSS los coloca en flujo normal,
+    //    por lo que no deben aplicarse transformaciones.
+    // ---------------------------------------------
+    if (window.matchMedia("(max-width: 720px)").matches) return;
+
+    // ---------------------------------------------
+    // 3. Configuracion de los telefonos
     // ---------------------------------------------
     const phones = document.querySelectorAll(".phone");
 
@@ -34,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let mouseY = 0;
 
     // ---------------------------------------------
-    // 3. Seguimiento del mouse
+    // 4. Seguimiento del mouse
     // ---------------------------------------------
     document.addEventListener("mousemove", (e) => {
         mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
@@ -42,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // ---------------------------------------------
-    // 4. Animacion principal (flotacion + parallax)
+    // 5. Animacion principal (flotacion + parallax)
     // ---------------------------------------------
     function animatePhones() {
         const t = performance.now() * 0.001;
