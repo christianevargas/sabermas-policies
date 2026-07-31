@@ -335,14 +335,14 @@ body {
 
 .phone {
     position: absolute;
-    top: 50%;
     left: 50%;
+    top: 50%;
     border-radius: 36px;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.10);
     background: #131722;
     box-shadow: var(--shadow-phone);
-    will-change: transform;
+    will-change: translate, transform;
 }
 
 .phone img {
@@ -356,6 +356,7 @@ body {
     width: 270px;
     z-index: 3;
     border-color: rgba(255, 255, 255, 0.16);
+    transform: translate(-50%, -50%);
 }
 
 /* Telefonos laterales */
@@ -363,10 +364,26 @@ body {
 .phone-3 {
     width: 216px;
     z-index: 2;
+    border-radius: 30px;
 }
 
-.phone-1 { border-radius: 30px; }
-.phone-3 { border-radius: 30px; }
+.phone-1 {
+    transform: translate(calc(-50% - 170px), calc(-50% + 42px)) rotate(-14deg);
+}
+
+.phone-3 {
+    transform: translate(calc(-50% + 170px), calc(-50% + 42px)) rotate(14deg);
+}
+
+/* Flotacion suave de los telefonos (propiedad translate, no interfiere) */
+@keyframes float-phone {
+    0%, 100% { translate: 0 0; }
+    50%      { translate: 0 -12px; }
+}
+
+.phone-1 { animation: float-phone 6s ease-in-out infinite; }
+.phone-2 { animation: float-phone 6s ease-in-out infinite 0.9s; }
+.phone-3 { animation: float-phone 6s ease-in-out infinite 1.8s; }
 
 
 /* ==========================================================
@@ -459,12 +476,6 @@ body {
     transform: translateY(0);
 }
 
-/* Flotacion suave de los telefonos */
-@keyframes float-phone {
-    0%, 100% { translate: 0 0; }
-    50%      { translate: 0 -12px; }
-}
-
 /* Respeto por animaciones reducidas */
 @media (prefers-reduced-motion: reduce) {
     *,
@@ -486,11 +497,15 @@ body {
     .hero {
         height: auto;
         min-height: 100vh;
-        overflow: auto;
+        max-height: none;
+        overflow: visible;
+        justify-content: flex-start;
         padding: 44px 40px 30px;
     }
 
     .container {
+        flex: 0 1 auto;
+        margin: auto;
         grid-template-columns: 1fr;
         gap: 10px;
         padding-top: 20px;
@@ -528,7 +543,15 @@ body {
 /* Moviles */
 @media (max-width: 720px) {
     .hero {
+        justify-content: flex-start;
+        max-height: none;
+        overflow: visible;
         padding: 34px 22px 24px;
+    }
+
+    .container {
+        flex: 0 1 auto;
+        margin: auto;
     }
 
     .brand-name { font-size: 24px; }
@@ -567,8 +590,11 @@ body {
 
     .phone {
         position: relative;
-        top: auto;
         left: auto;
+        top: auto;
+        transform: none;
+        animation: none;
+        margin: 0 !important;
     }
 
     .phone-2 {
