@@ -1,8 +1,9 @@
 /* ==========================================================
    PRE SABER MÁS · LANDING
    - Fade in al cargar
-   - Flotacion suave de los telefonos
-   - Parallax con el mouse
+   - Parallax con el mouse (solo pantallas grandes)
+   La posicion de los telefonos y su flotacion son 100% CSS,
+   por lo que el JS nunca aplica transformaciones.
 =========================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -16,67 +17,35 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ---------------------------------------------
-    // 2. Solo animar los telefonos en pantallas grandes.
-    //    En movil el CSS los coloca en flujo normal,
-    //    por lo que no deben aplicarse transformaciones.
+    // 2. Parallax solo en pantallas grandes.
+    //    En movil el layout es flujo normal (CSS puro).
     // ---------------------------------------------
     if (window.matchMedia("(max-width: 720px)").matches) return;
 
-    // ---------------------------------------------
-    // 3. Configuracion de los telefonos
-    // ---------------------------------------------
     const phones = document.querySelectorAll(".phone");
 
-    // Posiciones y rotaciones base (centradas en la mitad)
-    const basePositions = [
-        { x: -170, y: 42, rotate: -14 },  // phone-1 · izquierdo
-        { x: 0,    y: -14, rotate: 0 },   // phone-2 · central
-        { x: 170,  y: 42, rotate: 14 }    // phone-3 · derecho
-    ];
-
-    // Profundidad para el parallax (los laterales se mueven mas)
-    const depths = [16, 7, 16];
+    // Profundidad por telefono (los laterales se mueven mas)
+    const depths = [14, 6, 14];
 
     let mouseX = 0;
     let mouseY = 0;
 
-    // ---------------------------------------------
-    // 4. Seguimiento del mouse
-    // ---------------------------------------------
     document.addEventListener("mousemove", (e) => {
         mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
         mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
     });
 
     // ---------------------------------------------
-    // 5. Animacion principal (flotacion + parallax)
+    // 3. Parallax suave (solo desplaza con margins)
     // ---------------------------------------------
-    function animatePhones() {
-        const t = performance.now() * 0.001;
-
+    function parallax() {
         phones.forEach((phone, i) => {
-            const base = basePositions[i];
-
-            // Flotacion suave sinusoidal
-            const floatY = Math.sin(t + i * 1.4) * 11;
-            const floatX = Math.cos(t + i * 1.4) * 6;
-
-            // Parallax por profundidad
-            const parallaxX = mouseX * depths[i];
-            const parallaxY = mouseY * depths[i];
-
-            // Rotacion con leve oscilacion
-            const rotate = base.rotate + Math.sin(t + i * 1.4) * 1.6;
-
-            phone.style.transform =
-                `translate(calc(-50% + ${(base.x + floatX + parallaxX).toFixed(2)}px),
-                           calc(-50% + ${(base.y + floatY + parallaxY).toFixed(2)}px))
-                 rotate(${rotate.toFixed(2)}deg)`;
+            phone.style.marginLeft = `${(mouseX * depths[i]).toFixed(1)}px`;
+            phone.style.marginTop = `${(mouseY * depths[i]).toFixed(1)}px`;
         });
-
-        requestAnimationFrame(animatePhones);
+        requestAnimationFrame(parallax);
     }
 
-    animatePhones();
+    parallax();
 
 });
